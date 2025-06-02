@@ -9,7 +9,7 @@ import numpy as np
 from torch.utils.data import DataLoader, Dataset
 import pickle
 import sys
-sys.path.append("./compute")
+sys.path.append("../compute")
 import filter as dualsim_filter
 
 
