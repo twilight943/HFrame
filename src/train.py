@@ -203,7 +203,7 @@ if __name__ == "__main__":
     logger.info('training model')
     collate_fn = None
     if config["resplit"]:
-        train_dataset = IsoDataset(raw_dir=os.path.join(args.save_dir, "train"), ego=args.ego, adaptive_id=config['adaptive_id'])
+        train_dataset = IsoDataset(raw_dir=os.path.join(args.save_dir), ego=args.ego, adaptive_id=config['adaptive_id'])
         total_len = len(train_dataset)
         train_len = int(total_len * 8 / 10)
         val_len = int(total_len * 1 / 10)

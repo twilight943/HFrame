@@ -10,7 +10,6 @@ def add_args(parser):
     parser.add_argument("--batch_size", type=int)
     parser.add_argument("--print_every", type=int,
             help="log info each print_every iteration")
-    parser.add_argument("--train", action="store_true")
     
     parser.add_argument("--resplit", action="store_true")
     parser.add_argument("--ego", action="store_true")
@@ -85,8 +84,9 @@ def parse_encoder(parser):
         init_emb="Equivariant",
         add_id_enc=False,
         id_enc_dim=3,
-        train=False,
         homo=True,
+        ego=True,
+        adaptive_id=True,
         rglr_mlpid=True,
 
         dropout=0.0,
